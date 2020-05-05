@@ -1,0 +1,11 @@
+source 'http://rubygems.org'
+
+gem 'capybara', '~> 2.7', '>= 2.7.1'
+gem 'cucumber'
+gem 'selenium-webdriver', '~>3.4'
+gem 'rspec'
+gem 'site_prism'
+gem 'syntax'
+gem 'rubocop'
+gem 'byebug'
+gem 'ffi'
