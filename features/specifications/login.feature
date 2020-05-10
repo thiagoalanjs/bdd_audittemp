@@ -1,4 +1,5 @@
 #language: pt
+@login
 Funcionalidade: Acessa aplicação via login
 
 Esquema do Cenario: Validação de login

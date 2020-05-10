@@ -3,7 +3,7 @@
 default: -p pretty -p json -p no_headless -p local
 
 pretty: --format pretty
-ci: -p prod -p headless 
+ci: -p prod -p json -p headless 
 
 html:  --format html --out=results/report.html
 json:  --format json --out=results/report.json
