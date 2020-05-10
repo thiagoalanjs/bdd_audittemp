@@ -4,6 +4,7 @@ require 'byebug'
 require 'selenium-webdriver'
 require 'site_prism'
 require 'rspec'
+require 'faker'
 require_relative 'helper.rb'
 require_relative 'page_helper.rb'
 

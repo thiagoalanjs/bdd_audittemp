@@ -29,21 +29,6 @@ Esquema do Cenario: Validação do campo email com dados incorretos
         |Verifique os dados abaixo:       | q#%@#$%@#$%                 | Formato de email inválido          | 
         |Verifique os dados abaixo:       | @mailinator.com             | Formato de email inválido          |
 
-@campo_email
-Esquema do Cenario: Validação do campo email com dados incorretos
-    Dado que acesso a pagina de Cadastro
-    Quando preencher o email com "<email>"
-    Então valido mensagem de erro "<mensagem_alert>" e "<mensagem_erro>"
-
-    Exemplos:
-        |mensagem_alert                   | email                       | mensagem_erro                      |
-        |Verifique os dados abaixo:       |                             | Campo email deve ser preenchido.   |
-        |Verifique os dados abaixo:       | abc133                      | Formato de email inválido          |
-        |Verifique os dados abaixo:       | naovale@                    | Formato de email inválido          |
-        |Verifique os dados abaixo:       | q#%@#$%@#$%@mailinator.com  | Formato de email inválido          |        
-        |Verifique os dados abaixo:       | q#%@#$%@#$%                 | Formato de email inválido          | 
-        |Verifique os dados abaixo:       | @mailinator.com             | Formato de email inválido          |
-
 @campo_password
 Esquema do Cenario: Validação do campo password com dados incorretos
     Dado que acesso a pagina de Cadastro
@@ -67,3 +52,9 @@ Esquema do Cenario: Validação do campo password com dados incorretos
         |Verifique os dados abaixo:       |                                                                       | Campo confirmação de senha deve ser preenchido.                          |
         |Verifique os dados abaixo:       | 1                                                                     | Campo confirmação de senha deve ter no mínimo 6 e máximo 30 caracteres.  |
         |Verifique os dados abaixo:       | 123#$%GSDGWgg   dfgsdfgsdfgsfgsdfgsASDASDDWDEWDQWEQTQERTERTWERT U     | Campo confirmação de senha deve ter no mínimo 6 e máximo 30 caracteres.  |
+
+@cadastro_completo
+Cenario: Cadastro complexo
+    Dado que acesso a pagina de Cadastro
+    Quando preencho todos os campos corretamente
+    Então valida a mensagem "Bem vindo! Seu cadastro foi feito com sucesso."
