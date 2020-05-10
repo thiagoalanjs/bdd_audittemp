@@ -1,6 +1,6 @@
 ## YAML Templatesss
 ---
-default: -p pretty -p html -p no_headless -p local
+default: -p pretty -p json -p no_headless -p local
 
 pretty: --format pretty
 ci: -p prod -p headless 
