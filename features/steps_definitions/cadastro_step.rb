@@ -37,7 +37,7 @@ end
 
 Quando("preencho todos os campos corretamente") do
     sleep 3
-    find("#user_name").send_keys("#{Faker::Name.name}")
+    find("#user_name").send_keys("DT-#{Faker::Name.name}")
     find("#user_email").send_keys("#{Faker::Internet.email}")
     find("#user_password").send_keys("QAWSED123")
     find("#user_password_confirmation").send_keys("QAWSED123")

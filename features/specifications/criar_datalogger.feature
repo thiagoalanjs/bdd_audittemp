@@ -10,9 +10,10 @@ Esquema do Cenario: Preencher nome incorreto
     Exemplos:
         |campo_nome                          |mensagem_alert                                    |
         |                                    |Campo nome deve ser preenchido.                   |
-        | Th                                 |Campo deve ter no mínimo 3 e máximo 30 caracteres |
-        | Juan Manoel Fangio Soares Neto Jr  |Campo deve ter no mínimo 3 e máximo 30 caracteres |
-
+        | TH                                 |Campo deve ter no mínimo 3 e máximo 30 caracteres |
+        | DATALOGGER-1231231231231231231231  |Campo deve ter no mínimo 3 e máximo 30 caracteres |
+        | DT-TEST-NO-DELETE                  |Já existe um datalogger cadastrado com esse nome. |                
+        
 Esquema do Cenario: Preencher os campos de temperaturas com dados incorretos
     Dado que acesso a tela de criação de dataloggers
     Quando preencho o campos de temperaturas minima e máxima com o dados "<campo_temp_min>" e "<campo_temp_max>" 
