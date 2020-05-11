@@ -28,6 +28,7 @@ Esquema do Cenario: Validação do campo email com dados incorretos
         |Verifique os dados abaixo:       | q#%@#$%@#$%@mailinator.com  | Formato de email inválido          |        
         |Verifique os dados abaixo:       | q#%@#$%@#$%                 | Formato de email inválido          | 
         |Verifique os dados abaixo:       | @mailinator.com             | Formato de email inválido          |
+        |Verifique os dados abaixo:       | loss@mailinator.com         | Email já está cadastrado.          |
 
 @campo_password
 Esquema do Cenario: Validação do campo password com dados incorretos
