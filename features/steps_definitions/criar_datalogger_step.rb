@@ -29,7 +29,6 @@ Quando("preencho todos os na criação de datalogger") do
     find("#datalogger_min_temp").send_keys("0")
     find("#datalogger_max_temp").send_keys("50")
     find(".btn.responsive_button.btn.btn-info.btn-sm").click
-    
 end
 
 Então("a mensagem de sucesso é exibida {string}") do |mensagem_sucesso|
