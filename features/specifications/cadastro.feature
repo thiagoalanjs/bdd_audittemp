@@ -42,18 +42,6 @@ Esquema do Cenario: Validação do campo password com dados incorretos
         |Verifique os dados abaixo:       | 1                                                                     | Campo senha deve ter no mínimo 6 e máximo 30 caracteres.  |
         |Verifique os dados abaixo:       | 123#$%GSDGWgg   dfgsdfgsdfgsfgsdfgsASDASDDWDEWDQWEQTQERTERTWERT U     | Campo senha deve ter no mínimo 6 e máximo 30 caracteres.  |
 
-@campo_password_confirmation
-Esquema do Cenario: Validação do campo password com dados incorretos
-    Dado que acesso a pagina de Cadastro
-    Quando preencher a confirmação de senha com "<senha>"
-    Então valido mensagem de erro "<mensagem_alert>" e "<mensagem_erro>"
-
-    Exemplos:
-        |mensagem_alert                   | senha                                                                 | mensagem_erro                                                            |
-        |Verifique os dados abaixo:       |                                                                       | Campo confirmação de senha deve ser preenchido.                          |
-        |Verifique os dados abaixo:       | 1                                                                     | Campo confirmação de senha deve ter no mínimo 6 e máximo 30 caracteres.  |
-        |Verifique os dados abaixo:       | 123#$%GSDGWgg   dfgsdfgsdfgsfgsdfgsASDASDDWDEWDQWEQTQERTERTWERT U     | Campo confirmação de senha deve ter no mínimo 6 e máximo 30 caracteres.  |
-
 @campo_pass_password_confirmation
 Esquema do Cenario: Validação do campo password com dados incorretos
     Dado que acesso a pagina de Cadastro
