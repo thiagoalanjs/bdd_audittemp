@@ -30,11 +30,12 @@ Quando("preencher a confirmação de senha com {string}") do |senha|
     find('.btn.btn.btn-lg.btn-danger.btn-block.text-uppercase').click        
 end
 
-
 Quando("preencher a o campo senha e confirmação de senha") do
     sleep 3
     find("#user_password").click
     find("#user_password").send_keys("senhar54yu")
+    sleep 3
+    find("#user_password_confirmation").click
     find("#user_password_confirmation").send_keys("senhar34t245y254yu")
     find('.btn.btn.btn-lg.btn-danger.btn-block.text-uppercase').click        
 end
