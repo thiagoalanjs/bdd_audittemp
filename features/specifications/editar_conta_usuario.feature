@@ -19,15 +19,29 @@ Cenário: Alteração de nome corretamente
     Então a mensagem de sucesso exibida é "Seus dados foram atualizados com sucesso."     
     Então altero novamente para o nome anterior
 
-# Esquema do Cenario: Alteração do campo password com dados incorretos
-#     Dado que acesso a página de Editar dados
-#     Quando altero a confirmação de senha com "<senha>"
-#     Então a mensagem exibida é "<mensagem_erro>"
+@editar_email_incorreto
+Esquema do Cenario:
+    Dado que acesso a página de Editar dados
+    Quando altero o  email "<email>" do usuário com dados incorreto
+    Então a mensagem exibida é "<mensagem_erro>" 
 
-#     Exemplos:
-#         | senha                                                                 | mensagem_erro                                                            |
-#         | 1                                                                     | Campo confirmação de senha deve ter no mínimo 6 e máximo 30 caracteres.  |
-#         | 123#$%GSDGWgg   dfgsdfgsdfgsfgsdfgsASDASDDWDEWDQWEQTQERTERTWERT U     | Campo confirmação de senha deve ter no mínimo 6 e máximo 30 caracteres.  |
+
+    Exemplos:
+        | email                       | mensagem_erro                      |
+        |                             | Campo email deve ser preenchido.   |
+        | abc133                      | Formato de email inválido          |
+        | naovale@                    | Formato de email inválido          |
+        | q#%@#$%@#$%@mailinator.com  | Formato de email inválido          |        
+        | q#%@#$%@#$%                 | Formato de email inválido          | 
+        | @mailinator.com             | Formato de email inválido          |
+        | dtrump@mailinator.com       | Email já está cadastrado.          |
+
+@editar_email_correto
+Esquema do Cenario: 
+    Dado que acesso a página de Editar dados
+    Quando altero o email do usuário
+    Então a mensagem de sucesso exibida é "Seus dados foram atualizados com sucesso."
+    E realizo login com o novo email   
 
 # Esquema do Cenario: Alteração do campo password com dados incorretos
 #     Dado que acesso a página de Editar dados

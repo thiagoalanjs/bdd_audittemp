@@ -22,6 +22,7 @@ end
 Quando("altero o nome do usuário") do
     find("#user_name").set ""
     find("#user_name").send_keys("Loss Rodrigues") 
+    find("#user_current_password").send_keys("123qweasd")
     find(".btn.responsive_button.btn.btn-info").click
 end
 
@@ -35,6 +36,7 @@ Então("altero novamente para o nome anterior") do
     find(:xpath, "//*[@id='navbarSupportedContent']/ul[8]/li[2]/div/a[1]").click
     find("#user_name").set ""
     find("#user_name").send_keys("Louise Loss")    
+    find("#user_current_password").send_keys("123qweasd")
     find(".btn.responsive_button.btn.btn-info").click
 end
 
@@ -47,5 +49,11 @@ end
 Quando("altero a confirmação de senha com {string}") do |senha|
     find("#user_password_confirmation").set ""
     find("#user_password_confirmation").send_keys(senha)
+    find(".btn.responsive_button.btn.btn-info").click
+end
+
+Quando("altero o  email {string} do usuário com dados incorreto") do |email|
+    find("#user_email").set ""
+    find("#user_email").send_keys(email)
     find(".btn.responsive_button.btn.btn-info").click
 end
