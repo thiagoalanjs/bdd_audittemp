@@ -25,7 +25,6 @@ Esquema do Cenario:
     Quando altero o  email "<email>" do usuário com dados incorreto
     Então a mensagem exibida é "<mensagem_erro>" 
 
-
     Exemplos:
         | email                       | mensagem_erro                      |
         |                             | Campo email deve ser preenchido.   |
@@ -37,18 +36,30 @@ Esquema do Cenario:
         | dtrump@mailinator.com       | Email já está cadastrado.          |
 
 @editar_email_correto
-Esquema do Cenario: 
+Cenario: 
     Dado que acesso a página de Editar dados
     Quando altero o email do usuário
-    Então a mensagem de sucesso exibida é "Seus dados foram atualizados com sucesso."
-    E realizo login com o novo email   
+    E realizo login com o novo email 
+    Então a mensagem de sucesso exibida é "Seus dados foram atualizados com sucesso."  
 
-# Esquema do Cenario: Alteração do campo password com dados incorretos
-#     Dado que acesso a página de Editar dados
-#     Quando altero a confirmação de senha com "<senha>"
-#     Então a mensagem exibida é "<mensagem_erro>"
+@editar_confirmacao_senha_incorreta
+Esquema do Cenario: Alteração do campo password com dados incorretos
+     Dado que acesso a página de Editar dados
+     Quando altero a confirmação de senha com "<senha>"
+     Então a mensagem exibida é "<mensagem_erro>"
 
-#     Exemplos:
-#         | senha                                                                 | mensagem_erro                                                            |
-#         | 1                                                                     | Campo confirmação de senha deve ter no mínimo 6 e máximo 30 caracteres.  |
-#         | 123#$%GSDGWgg   dfgsdfgsdfgsfgsdfgsASDASDDWDEWDQWEQTQERTERTWERT U     | Campo confirmação de senha deve ter no mínimo 6 e máximo 30 caracteres.  |
+     Exemplos:
+         | senha                                                              | mensagem_erro            |
+         | 1                                                                  | As senhas não conferem.  |
+         | 123#$%GSDGWgg   dfgsdfgsdfgsfgsdfgsASDASDDWDEWDQWEQTQERTERTWERT U  | As senhas não conferem.  |
+
+@editar_alteracao_senha_incorreta
+Esquema do Cenario: Alteração do campo password e confirmação de senha com dados incorretos
+     Dado que acesso a página de Editar dados
+     Quando altero os dados de senha e confirmação de senha com "<senha>" e "<confirmacao_senha>"
+     Então a mensagem exibida é "As senhas não conferem."
+
+     Exemplos:
+         | senha          | confirmacao_senha |
+         | 1derfergeg     | 67u5677           |
+        
