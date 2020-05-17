@@ -1,34 +1,18 @@
 Dado("que estou na tela de edição de dados do datalogger") do
-    @login = Login.new 
-    visit(ENV['url_default'])
-    login = "loss@mailinator.com"
+    email = "loss@mailinator.com"
     senha = "123qweasd"
-    @login.autenticacao_login(login, senha)
-    sleep(5)
-    find(".btn.btn-warning", match: :first).click
+    login.autenticacao_login(email, senha)
+    datalogger.acessar_editar_datalogger
 end
 
 Quando("edito o campo nome com o dado {string}") do |campo_nome|
-    find("#datalogger_name").set ""
-    find("#datalogger_name").send_keys(campo_nome)
-    find(".btn.responsive_button.btn.btn-info.btn-sm").click
+    datalogger.digitar_nome_datalogger(campo_nome)
 end
 
-Quando("edito o campos de temperaturas minima e máxima com o dados {string} e {string}") do |campo_temp_min, campo_temp_max|
-    find("#datalogger_min_temp").set ""
-    find("#datalogger_min_temp").send_keys(campo_temp_min)
-    find("#datalogger_max_temp").set ""
-    find("#datalogger_max_temp").send_keys(campo_temp_max)
-    find(".btn.responsive_button.btn.btn-info.btn-sm").click
+Quando("edito o campos de temperaturas minima e máxima com o dados {string} e {string}") do |temp_min, temp_max|
+    datalogger.digitar_campos_temperatura(temp_min, temp_max)
 end
 
 Quando("edito todos os campos de datalogger") do
-    date = Time.now
-    find("#datalogger_name").set ""
-    find("#datalogger_name").send_keys("DATALOGGER-#{date.strftime("%m%d%Y%H%M%S")}")
-    find("#datalogger_min_temp").set ""
-    find("#datalogger_min_temp").send_keys("0")
-    find("#datalogger_max_temp").set ""
-    find("#datalogger_max_temp").send_keys("50")
-    find(".btn.responsive_button.btn.btn-info.btn-sm").click
+    datalogger.criar_datalogger
 end
