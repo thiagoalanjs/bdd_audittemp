@@ -10,4 +10,8 @@ module Pages
     def cadastro
         @cadastro ||= Cadastro.new
     end
+
+    def datalogger
+        @datalogger ||= Datalogger.new
+    end
 end

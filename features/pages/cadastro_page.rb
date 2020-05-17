@@ -3,11 +3,11 @@ class Cadastro < SitePrism::Page
     element :campo_email, '#user_email' 
     element :campo_senha, '#user_password'
     element :campo_confirmacao_senha, '#user_password_confirmation'
+    element :botao_cadastrar, '.responsive_button.btn.btn-warning'
     element :botao_criar, '.btn.btn.btn-lg.btn-danger.btn-block.text-uppercase'
 
     def acessar_cadastro
-        visit(ENV['url_default'])
-        find('.responsive_button.btn.btn-warning').click
+        botao_cadastrar.click
     end
 
     def digitar_nome(nome)

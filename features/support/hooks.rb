@@ -1,5 +1,9 @@
 require_relative 'helper.rb'
 
+Before do
+  visit "/"
+end
+
 After do |scenario|
   scenario_name = scenario.name.gsub(/[^A-Za-z ]/, '').gsub(/\s+/, '_')
 
