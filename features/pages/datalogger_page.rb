@@ -5,7 +5,7 @@ class Datalogger < SitePrism::Page
     element :campo_obs, '#datalogger_obs'
     element :botao_salvar, '.btn.responsive_button.btn.btn-info.btn-sm'
     element :botao_novo_datalogger, '.responsive_button.btn.btn-success'
-    
+
     def acessar_criar_novo_datalogger
         wait_until_botao_novo_datalogger_visible
         botao_novo_datalogger.click
@@ -30,5 +30,11 @@ class Datalogger < SitePrism::Page
         campo_temp_min.set "0"
         campo_temp_max.set "50"
         botao_salvar.click
+    end
+
+    def deletar_datalogger
+        find(".btn.btn-danger.btn-sm", match: :first).click
+        popup = page.driver.browser.switch_to.alert
+        popup.accept
     end
 end
