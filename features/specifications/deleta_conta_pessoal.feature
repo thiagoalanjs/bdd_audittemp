@@ -1,5 +1,5 @@
 #language: pt
-@deleta_conta
+@deletar_conta
 Funcionalidade: Deleta conta do usuário logado
 
 Cenário: Deleta a conta

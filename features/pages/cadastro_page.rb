@@ -59,4 +59,17 @@ class Cadastro < SitePrism::Page
         campo_confirmacao_senha.set "QAWSED123"
         botao_criar.click 
     end
+
+    def criar_cadastro_conta_usuario
+        date = Time.now
+        campo_nome.click
+        campo_nome.set "Donkey Kong"
+        campo_email.click
+        campo_email.set "donkeykong@mailinator.com"
+        campo_senha.click
+        campo_senha.set "QAWSED123"
+        campo_confirmacao_senha.click
+        campo_confirmacao_senha.set "QAWSED123"
+        botao_criar.click 
+    end
 end

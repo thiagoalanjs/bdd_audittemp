@@ -14,4 +14,8 @@ module Pages
     def datalogger
         @datalogger ||= Datalogger.new
     end
+
+    def conta_usuario
+        @conta_usuario ||= ContaUsuario.new
+    end
 end
