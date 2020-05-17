@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'capybara', '~> 2.7', '>= 2.7.1'
+gem 'capybara'
 gem 'cucumber'
-gem 'selenium-webdriver', '~>3.4'
+gem 'selenium-webdriver'
 gem 'rspec'
 gem 'site_prism'
 gem 'syntax'
