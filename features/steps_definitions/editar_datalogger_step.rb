@@ -23,8 +23,9 @@ Quando("edito o campos de temperaturas minima e máxima com o dados {string} e {
 end
 
 Quando("edito todos os campos de datalogger") do
+    date = Time.now
     find("#datalogger_name").set ""
-    find("#datalogger_name").send_keys("DATALOGGER-#{Faker::Number.number(10)}")
+    find("#datalogger_name").send_keys("DATALOGGER-#{date.strftime("%m%d%Y%H%M%S")}")
     find("#datalogger_min_temp").set ""
     find("#datalogger_min_temp").send_keys("0")
     find("#datalogger_max_temp").set ""

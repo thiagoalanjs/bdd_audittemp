@@ -18,14 +18,16 @@ Então("a mensagem {string} é exibida") do |mensagem_alert|
 end
 
 Quando("preencho o campos de temperaturas minima e máxima com o dados {string} e {string}") do |campo_temp_min, campo_temp_max|
-    find("#datalogger_name").send_keys("DATALOGGER-#{Faker::Number.number(10)}")
+    date = Time.now
+    find("#datalogger_name").send_keys("DATALOGGER-#{date.strftime("%m%d%Y%H%M%S")}")
     find("#datalogger_min_temp").send_keys(campo_temp_min)
     find("#datalogger_max_temp").send_keys(campo_temp_max)
     find(".btn.responsive_button.btn.btn-info.btn-sm").click
 end
 
 Quando("preencho todos os na criação de datalogger") do
-    find("#datalogger_name").send_keys("DATALOGGER-#{Faker::Number.number(10)}")
+    date = Time.now
+    find("#datalogger_name").send_keys("DATALOGGER-#{date.strftime("%m%d%Y%H%M%S")}")
     find("#datalogger_min_temp").send_keys("0")
     find("#datalogger_max_temp").send_keys("50")
     find(".btn.responsive_button.btn.btn-info.btn-sm").click

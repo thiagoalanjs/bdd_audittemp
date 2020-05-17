@@ -3,7 +3,11 @@ Dir[File.join(File.dirname(__FILE__),
 
 # Modulos para chamar as classes instanciadas
 module Pages
-    # def Login
-    #     @login ||= Login.new
-    # end
+    def login
+        @login ||= Login.new
+    end
+    
+    def cadastro
+        @cadastro ||= Cadastro.new
+    end
 end

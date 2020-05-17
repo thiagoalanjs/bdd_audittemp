@@ -5,11 +5,11 @@ Funcionalidade: Cadastro de usuário para uso da aplicação
 @campo_nome
 Esquema do Cenario: Validação do campo nome com dados incorretos
     Dado que acesso a pagina de Cadastro
-    Quando preencher o nome com "<campo_nome>"
+    Quando preencher o nome com "<nome>"
     Então valido mensagem de erro "<mensagem_alert>" e "<mensagem_erro>"
 
     Exemplos:
-        |mensagem_alert                   | campo_nome                                      | mensagem_erro                                                |
+        |mensagem_alert                   | nome                                            | mensagem_erro                                                |
         |Verifique os dados abaixo:       | A                                               | Campo deve ter no mínimo 3 e máximo 20 caracteres            |
         |Verifique os dados abaixo:       |                                                 | Campo nome deve ser preenchido.                              |
         |Verifique os dados abaixo:       | !@#QWEASDZXCVBNFGHRTY$%ŸIU*YIUHKJzxczxczxc      | Campo deve ter no mínimo 3 e máximo 20 caracteres            |
