@@ -1,4 +1,5 @@
-results/screenshots/*
+results/screenshots
+results/screenshots
 results/*.json
 results/*.html
 Gemfile.lock
