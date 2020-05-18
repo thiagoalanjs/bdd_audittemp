@@ -1,5 +1,5 @@
 #language: pt
-@editar_conta_usuario
+    @editar_conta_usuario
 Funcionalidade: Editar dados da conta do usuário
 
 Esquema do Cenario: Alterar nome do usuário com dados incorretos

@@ -5,6 +5,7 @@ end
 
 Quando("deleto a minha conta") do
     conta_usuario.clicar_editar_usuario
+    conta_usuario.cancelar_conta_usuario
 end
 
 Então("não é possível realizar login novamente") do
