@@ -5,12 +5,10 @@ Dado("que os botões de paginação estão disponíves") do
 end
 
 Quando("click no botão para segunda página") do
-    find(:xpath, "/html/body/div[2]/div/nav/ul/li[2]/a").click
+    paginacao.clicar_botao_paginacao
 end
 
 Então("valido a url gerada") do
     expect(current_url).to eq "#{CONFIG['url_default']}dataloggers?page=2" 
-    sleep 4
     expect(page).to have_content("Gerencie seu Datalogger")
-
 end

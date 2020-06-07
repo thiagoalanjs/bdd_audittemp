@@ -18,4 +18,8 @@ module Pages
     def conta_usuario
         @conta_usuario ||= ContaUsuario.new
     end
+
+    def paginacao
+        @paginacao ||= Paginacao.new
+    end
 end
