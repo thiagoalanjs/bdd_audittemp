@@ -7,7 +7,7 @@ module Helper
     file_path = "results/screenshots/test_#{result}"
     screenshot = "#{file_path}/#{file_name}.png"
     page.save_screenshot(screenshot)
-    embed(screenshot, 'image/png', 'Click here')
+    attach(screenshot, 'image/png')
   end
 
   def wait_for_ajax

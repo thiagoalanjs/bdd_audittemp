@@ -16,7 +16,7 @@ Esquema do Cenario: Validação de login
 		|                     |123456      | Email ou senha inválidos |
 
 Esquema do Cenario: Login correto
-	Dados que acesso a aplicação
+	Dado que acesso a aplicação
 	Quando realizo a autenticação com "<email>" e "<senha>" corretos
 	Então temos a "<mensagem>" de sucesso
 
