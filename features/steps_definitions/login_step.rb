@@ -18,11 +18,3 @@ end
 Então("temos a {string} de sucesso") do |mensagem|
     expect(page).to have_content(mensagem)
 end
-
-Quando("digito login e senha") do
-    login.
-end
-
-Então("valido se o ícone para apresentar a senha funciona") do
-
-end

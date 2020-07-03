@@ -4,11 +4,12 @@ class Datalogger < SitePrism::Page
     element :campo_temp_max, '#datalogger_max_temp'
     element :campo_obs, '#datalogger_obs'
     element :botao_salvar, '.btn.responsive_button.btn.btn-info.btn-sm'
-    element :botao_novo_datalogger, '.responsive_button.btn.btn-success'
+    element :botao_novo_datalogger, '#new_datalogger_button'
     element :botao_deletar, '.btn.btn-warning'
 
     def acessar_criar_novo_datalogger
-        wait_until_botao_novo_datalogger_visible
+        #wait_until_botao_novo_datalogger_visible
+        sleep(2)
         botao_novo_datalogger.click
     end
 
